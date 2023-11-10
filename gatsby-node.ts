@@ -3,12 +3,30 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
  */
-
+import type { Actions, GatsbyNode } from "gatsby"
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Define the template for blog post
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
+
+// Webpack setting
+export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = ({
+  getConfig,
+  actions,
+}) => {
+  const output = getConfig().output || {}
+
+  actions.setWebpackConfig({
+    output,
+    resolve: {
+      alias: {
+        "@/src": path.resolve(__dirname, "src/"),
+        "@/assets": path.resolve(__dirname, "assets/"),
+      },
+    },
+  })
+}
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
