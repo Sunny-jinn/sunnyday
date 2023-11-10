@@ -1,5 +1,12 @@
 import React, { FunctionComponent } from "react"
 import { graphql } from "gatsby"
+import styled from "@emotion/styled"
+
+const TestStyle = styled.div`
+  font-size: 30px;
+  font-weight: 600;
+  color: red;
+`
 
 type InfoPageProps = {
   data: {
@@ -16,7 +23,7 @@ type InfoPageProps = {
   }
 }
 
-const InfoPage: FunctionComponent<InfoPageProps> = ({
+const InfoPage: React.FC<InfoPageProps> = ({
   data: {
     site: {
       siteMetadata: { title, description, author },
@@ -25,7 +32,9 @@ const InfoPage: FunctionComponent<InfoPageProps> = ({
 }) => {
   return (
     <div>
-      {title} {description} {author.name}
+      <TestStyle>
+        {title} {description} {author.name}
+      </TestStyle>
     </div>
   )
 }

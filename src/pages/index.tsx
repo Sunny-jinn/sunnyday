@@ -1,13 +1,31 @@
 import React, { FunctionComponent } from "react"
-import Text from "../components/Test"
 import { Link } from "gatsby"
+import styled from "@emotion/styled"
+import { Introduction } from "../components/Introduction"
+import { Footer } from "../components/Footer"
+import { CategoryList } from "../components/CategoryList"
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`
+
+const CATEGORY_LIST = {
+  All: 5,
+  Web: 3,
+  Mobile: 2,
+}
 
 const IndexPage: FunctionComponent = function () {
   return (
-    <>
-      안녕
-      <Link to="/info/">To Info</Link>
-    </>
+    <Container>
+      <Introduction />
+
+      <CategoryList selectedCategory="Web" categoryList={CATEGORY_LIST} />
+
+      <Footer />
+    </Container>
   )
 }
 
