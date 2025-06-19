@@ -26,6 +26,7 @@ const IndexPage: FunctionComponent = function () {
       <span>Hi</span>
       <span>Error Fix</span>
       <span>New from feat/test</span>
+      <span>New from Main</span>
       <Footer />
     </Container>
   )
