@@ -28,6 +28,7 @@ const IndexPage: FunctionComponent = function () {
       <span>New from Main</span>
       <span>New New from Main</span>
       <span>New from feat/test</span>
+      <span>New New from feat/test</span>
       <Footer />
     </Container>
   )
