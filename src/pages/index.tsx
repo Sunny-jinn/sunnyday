@@ -23,7 +23,7 @@ const IndexPage: FunctionComponent = function () {
       <Introduction />
 
       <CategoryList selectedCategory="Web" categoryList={CATEGORY_LIST} />
-
+      <span>Hi</span>
       <Footer />
     </Container>
   )
