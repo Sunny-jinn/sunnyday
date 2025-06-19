@@ -25,6 +25,7 @@ const IndexPage: FunctionComponent = function () {
       <CategoryList selectedCategory="Web" categoryList={CATEGORY_LIST} />
       <span>Hi</span>
       <span>Error Fix</span>
+      <span>New from feat/test</span>
       <Footer />
     </Container>
   )
