@@ -30,6 +30,7 @@ const IndexPage: FunctionComponent = function () {
       <span>New from feat/test</span>
       <span>New New from feat/test</span>
       <span>Real Last from Main</span>
+      <span>Real Last from feat/test</span>
       <Footer />
     </Container>
   )
